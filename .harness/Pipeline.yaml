@@ -40,8 +40,8 @@
                       touch pythondockerfile
                       cat > pythondockerfile <<- EOM
                       FROM python:3.10.6-alpine
-                      WORKDIR /python-pipeline-sample
-                      ADD . /python-pipeline-sample
+                      WORKDIR /flask-pipeline
+                      ADD . /flask-pipeline
                       RUN pip install -r requirements.txt
                       CMD ["python3" , "./app.py"]
                       EOM
