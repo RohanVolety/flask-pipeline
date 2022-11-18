@@ -1,6 +1,6 @@
 pipeline:
-  name: FLASK-CI
-  identifier: FLASK-CI
+  name: FLASKCI
+  identifier: FLASKCI
   projectIdentifier: Flaskpipeline
   orgIdentifier: default
   tags: {}
