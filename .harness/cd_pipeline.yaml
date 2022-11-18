@@ -1,7 +1,7 @@
 pipeline:
-  name: testk8s
-  identifier: testk8s
-  projectIdentifier: FIRST-CD
+  name: Flask-CI
+  identifier: FLASK-CI
+  projectIdentifier: Flaskpipeline
   orgIdentifier: default
   tags: {}
   stages:
