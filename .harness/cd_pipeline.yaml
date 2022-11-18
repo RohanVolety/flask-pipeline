@@ -1,5 +1,5 @@
 pipeline:
-  name: Flask-CI
+  name: FLASK-CI
   identifier: FLASK-CI
   projectIdentifier: Flaskpipeline
   orgIdentifier: default
