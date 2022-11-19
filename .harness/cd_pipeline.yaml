@@ -47,7 +47,7 @@ pipeline:
                 artifacts:
                   primary:
                     spec:
-                      connectorRef: harnessdocker
+                      connectorRef: docker_quickstart
                       imagePath: <+input>
                       tag: <+input>
                     type: DockerRegistry
