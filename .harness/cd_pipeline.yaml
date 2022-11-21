@@ -90,7 +90,7 @@ pipeline:
                     shell: Sh
                     command: |-
                       sleep 10
-                      curl -v http://localhost:5000
+                      curl 0.0.0.0:5000
     - stage:
         name: k8deploy
         identifier: k8deploy
