@@ -90,7 +90,7 @@ pipeline:
                     shell: Sh
                     command: |-
                       sleep 10
-                      curl www.google.com
+                      curl python_server:5000
     - stage:
         name: k8deploy
         identifier: k8deploy
