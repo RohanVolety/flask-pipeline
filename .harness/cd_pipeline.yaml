@@ -89,8 +89,8 @@ pipeline:
                     image: curlimages/curl:7.73.0
                     shell: Sh
                     command: |-
-                      sleep 20
-                      curl -v http://192.168.5.56:5000
+                      sleep 10
+                      curl 192.168.5.56:5000
     - stage:
         name: k8deploy
         identifier: k8deploy
