@@ -90,7 +90,7 @@ pipeline:
                     shell: Sh
                     command: |-
                       sleep 10
-                      wget http://192.168.5.56:5000
+                      curl http://192.168.5.56:5000
     - stage:
         name: k8deploy
         identifier: k8deploy
