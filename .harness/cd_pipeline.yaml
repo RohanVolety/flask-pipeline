@@ -12,7 +12,7 @@ pipeline:
         type: Deployment
         spec:
           serviceConfig:
-            serviceRef: k8service
+            serviceRef: flaskapp
             serviceDefinition:
               spec:
                 variables: []
@@ -24,11 +24,10 @@ pipeline:
                         store:
                           type: Github
                           spec:
-                            connectorRef: testhelp
+                            connectorRef: pythonsampleconnector
                             gitFetchType: Branch
                             paths:
                               - default-k8s-manifests/Manifests/Files/templates
-                            repoName: harness-docs
                             branch: main
                         skipResourceVersioning: false
                   - manifest:
@@ -38,26 +37,25 @@ pipeline:
                         store:
                           type: Github
                           spec:
-                            connectorRef: testhelp
+                            connectorRef: pythonsampleconnector
                             gitFetchType: Branch
                             paths:
                               - default-k8s-manifests/Manifests/Files/ng_values_dockercfg.yaml
-                            repoName: harness-docs
                             branch: main
                 artifacts:
                   primary:
                     spec:
-                      connectorRef: harnessdocker
-                      imagePath: <+input>
+                      connectorRef: docker_quickstart
+                      imagePath: flaskapp
                       tag: <+input>
                     type: DockerRegistry
               type: Kubernetes
           infrastructure:
-            environmentRef: K8Env
+            environmentRef: deployenv
             infrastructureDefinition:
               type: KubernetesDirect
               spec:
-                connectorRef: test
+                connectorRef: kubernetesinfra
                 namespace: default
                 releaseName: release-<+INFRA_KEY>
             allowSimultaneousDeployments: false
