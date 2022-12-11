@@ -46,7 +46,7 @@ pipeline:
                   primary:
                     spec:
                       connectorRef: docker_quickstart
-                      imagePath: flaskapp
+                      imagePath: rohan010/flaskapp
                       tag: <+input>
                     type: DockerRegistry
               type: Kubernetes
